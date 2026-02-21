@@ -3,7 +3,7 @@
 void OnMessage(SKSE::MessagingInterface::Message* a_msg)
 {
 	if (a_msg->type == SKSE::MessagingInterface::kPostLoad) {
-		OAR_API::Conditions::GetAPI(OAR_API::Conditions::InterfaceVersion::V2);
+		OAR_API::Conditions::GetAPI(OAR_API::Conditions::InterfaceVersion::Latest);
 		if (g_oarConditionsInterface) {
 			switch (OAR_API::Conditions::AddCustomCondition<Conditions::MathStatementCondition>()) {
 				using enum OAR_API::Conditions::APIResult;
